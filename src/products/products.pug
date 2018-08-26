@@ -1,4 +1,4 @@
-//- extends ../_component/layout/template
+extends ../_component/layout/template
 
 block config
   -
@@ -7,11 +7,10 @@ block config
     var landingPage = 'products';
     var activeLink = '';
 
-html
   header
-    .logo
-  body
-  block content
+    //- include ../_component/header/header
+    //- .logo
+block content
     h1=myTitle
     .all-products
       h2 dnashjbfaj

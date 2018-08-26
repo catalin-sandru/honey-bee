@@ -1,23 +1,23 @@
-//- -
-//-   var topNavigationList = [
-//-     {label: 'Home', link: '/'},
-//-     {label: 'Products', link: '/products'},
-//-     {label: 'History', link: '/history'},
-//-     {label: 'Gallery', link: '/gallery'},
-//-     {label: 'Info', link: '/info'},
-//-     {label: 'Contact', link: '/contact'},
-//-   ];
+-
+  var topNavigationList = [
+    {label: 'Home', link: '/'},
+    {label: 'Products', link: '/products'},
+    {label: 'History', link: '/history'},
+    {label: 'Gallery', link: '/gallery'},
+    {label: 'Info', link: 'info'},
+    {label: 'Contact', link: '/contact'},
+  ];
 
 header
-  //- each navigation in topNavigationList
-  //-   //- check if navigation label is the same as landingPage
-  //-   if navigation.label == landingPage
-  //-     a.current(href=`${baseUrl}${navigation.link}`)=navigation.label
-  //-   else
-  //-     a(href=`${baseUrl}${navigation.link}`)=navigation.label
-  a(href="/") Home
-  a(href="/products") Products
-  a(href="/short-history") Short History
-  a(href="/gallery") Gallery
-  a(href="/info") Info
-  a(href="/contact") Contact
+  each navigation in topNavigationList
+    //- check if navigation label is the same as landingPage
+    if navigation.label == landingPage
+      a.current(href=`${baseUrl}${navigation.link}`)=navigation.label
+    else
+      a(href=`${baseUrl}${navigation.link}`)=navigation.label
+  //- a(href="/") Home
+  //- a(href="/products") Products
+  //- a(href="/history") Short History
+  //- a(href="/gallery") Gallery
+  //- a(href="/info") Info
+  //- a(href="/contact") Contact

@@ -1,13 +1,17 @@
 //- extends ../_component/layout/template
+
 block config
   -
-    var title=myTitle
-    var description=myDescription
-    var activeLink = 'products';
+    var myTitle = 'sortimente';
+    var myDescription = 'borcane';
+    var landingPage = 'products';
+    var activeLink = '';
 
 html
   header
     .logo
   body
+  block content
+    h1=myTitle
     .all-products
       h2 dnashjbfaj

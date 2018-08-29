@@ -1,18 +1,27 @@
-block aside
-#grid
-  .grid-content
-    .item1
-      h3 Did you know!
-      p 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus molestie ligula eget lobortis laoreet.
-    .item2
-      h3 Did you know!
-      p 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus molestie ligula eget lobortis laoreet.
-    .item3
-      h3 Did you know!
-      p 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus molestie ligula eget lobortis laoreet.
-    .item4
-      h3 Did you know!
-      p 4 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus molestie ligula eget lobortis laoreet.
-    .item5
-      h3 Did you know!
-      p 5 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus molestie ligula eget lobortis laoreet.
+-
+  var title = "Did you know!"
+  var content = [
+    "Bees are the only insect in the world that make food that people can eat",
+    "Honey contains all of the substances needed to sustain life, including enzymes, water, minerals and vitamins",
+    "Eating honey can help you smarter! It is the only food to contain ‘pinocembrin’ that is an antioxidant that improves brain function",
+    "One bee will only make 1/12 of a teaspoon on honey in its entire life",
+    "Many plants rely on insects like bees in order to be pollinated; which is why they provide nectar to say thanks",
+    "A colony of bees can contain between 20,000 and 60,000 bees, but only one queen bee",
+    "A bee’s wings beat 190 times a second, that’s 11,400 times a minute!",
+    "The queen bee will lay around 1,500 eggs a day",
+    "Honey has natural preservatives so that it won’t go bad"
+  ];
+
+aside
+  .first_container
+    h3=title
+    p.random=randomIndex = Math.floor(Math.random() * content.length)
+  .second_container
+    h3=title
+    p.random=randomElement = content[randomIndex]
+  .third_container
+    h3=title
+    p.random=randomElement = content[randomIndex]
+//- -
+//-   var randomIndex = Math.floor(Math.random() * content.length); 
+//-   var randomElement = content[randomIndex];

@@ -12,19 +12,19 @@
     "Honey has natural preservatives so that it won’t go bad"
   ];
 
-  var random = content[Math.floor(Math.random() * content.length)];
-  function random(){
-    document.getElementById('random').innerHTML = random;
-  }
+  var randomList = content[Math.floor(Math.random() * content.length)];
+  //- function random(){
+  //-     document.getElementById('random').innerHTML = randomList;
+  //-   }
 
 aside
   .first_container
     h3=title
-    p#random=random
+    p=randomList
   .second_container
     h3=title
-    p#random=random
+    p=randomList
   .third_container
     h3=title
-    p#random=random
+    p#random=randomList
 

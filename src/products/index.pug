@@ -2,8 +2,8 @@ extends ../_component/layout/template
 
 block config
   -
-    var myTitle = 'sortimente';
-    var myDescription = 'borcane';
+    var myTitle = 'Find your flavor, color and taste';
+    var myDescription = 'With our selections of natural made honey from the hills of Transilvanya and Moldavia, you will find the best flavor for a sweeter life';
     var landingPage = 'products';
     var activeLink = '';
 
@@ -11,6 +11,16 @@ block config
     //- include ../_component/header/header
     //- .logo
 block content
-    h1=myTitle
-    .all-products
-      h2 dnashjbfaj
+  h1=myTitle
+  p=myDescription
+  .all-products
+    .acacia-honey
+      img(src='../asset/products-image/acacia-honey.jpg' alt='picture with acacia honey')
+      h2 #[a(href='acacia honey') Acacia Honey] 
+      p bfhjdsbfjhs
+    .linden-honey
+      h2 #[a(href='') Linden Honey]
+      p dnjkbsf
+    .polyfloralr-honey
+      h2 #[a(href='') Polyfloral Honey]
+      p fbhdvsfuvau

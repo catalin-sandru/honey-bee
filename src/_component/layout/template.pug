@@ -1,19 +1,19 @@
 doctype html
 html
-  //- - var baseUrl = 'http://localhost:3000'
+//- - var baseUrl = 'http://localhost:3000'
 
-  block config
-  head
-    title=myTitle
-    meta(name="description", content=myDescription)
-    link(rel="stylesheet", href="/style.css")
-  body
-    include ../header/header
-    //- .img
-    //-   img(src='../asset/header-image/header.jpg')
+block config
+head
+  title=myTitle
+  meta(name="description", content=myDescription)
+  link(rel="stylesheet", href="/style.css")
+body
+  include ../header/header
+  //- .img
+  //-   img(src='../asset/header-image/header.jpg')
 
-    article
-      block content
-    aside
-      include ../aside/aside
-    include ../footer/footer
+  article
+    block content
+  aside
+    include ../aside/aside
+  include ../footer/footer

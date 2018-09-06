@@ -1,6 +1,17 @@
--
+//- TODO: se incaleca acolo unul pe altul, il repari mai tarziu
+div
+  h3=title
+  p.did-you-know__container
+div
+  h3=title
+  p.did-you-know__container
+div
+  h3=title
+  p.did-you-know__container
+
+script.
   var title = "Did you know!"
-  var content = [
+  var contentList = [
     "Bees are the only insect in the world that make food that people can eat",
     "Honey contains all of the substances needed to sustain life, including enzymes, water, minerals and vitamins",
     "Eating honey can help you smarter! It is the only food to contain ‘pinocembrin’ that is an antioxidant that improves brain function",
@@ -11,21 +22,16 @@
     "The queen bee will lay around 1,500 eggs a day",
     "Honey has natural preservatives so that it won’t go bad"
   ];
+  //- asta il tinem pentru ca sa vezi de unde ai pornit, dar il transformam intr-o functie
+  // var randomContent = contentList[Math.floor(Math.random() * contentList.length)];
+  var randomContent = () => {
+    return contentList[Math.floor(Math.random() * contentList.length)];
+  }
+  document
+    .querySelectorAll('.did-you-know__container')
+    //                      aici chemam function cu numele si () ->    numeFunctie()
+    .forEach(/*scriem o functie*/ didYouKnow => didYouKnow.innerHTML = randomContent())
+  // happy hacking
+  // merge acum, mai vroiai si in alta parte? sa apara in  toate trei diferit, nu?
 
-  var randomList = content[Math.floor(Math.random() * content.length)];
-  if (n > content.length) {contentIndex = 1}
-  //- function random(){
-  //-     document.getElementById('random').innerHTML = randomList;
-  //-   }
-
-aside
-  .first_container
-    h3=title
-    p=randomList
-  .second_container
-    h3=title
-    p=randomList
-  .third_container
-    h3=title
-    p#random=randomList
 

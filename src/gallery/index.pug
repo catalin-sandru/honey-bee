@@ -9,12 +9,50 @@ block config
 block content
   h1=myTitle
   p=myDescription
+  //- images used to open the modal
+
   .row
     .column
-      img(src="https://picsum.photos/680/450", onclick="openModal();currentSlide(1)" class="hover-shadow")
+      img.hoover-shadow(src="/asset/image/gallery/1.jpg", onclick="openModal();currentSlide(1)")
     .column
-      img(src="https://picsum.photos/680/450", onclick="openModal();currentSlide(2)" class="hover-shadow")
+      img.hoover-shadow(src="/asset/image/gallery/2.jpg", onclick="openModal();currentSlide(2)")
     .column
-      img(src="https://picsum.photos/680/450", onclick="openModal();currentSlide(3)" class="hover-shadow")
+      img.hoover-shadow(src="/asset/image/gallery/3.jpg", onclick="openModal();currentSlide(3)")
     .column
-      img(src="https://picsum.photos/680/450", onclick="openModal();currentSlide(4)" class="hover-shadow")
+      img.hoover-shadow(src="/asset/image/gallery/4.jpg", onclick="openModal();currentSlide(4)")
+  
+  //- the modal
+  #myModal.modal
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    .modal-content
+      .mySlides
+        .numbertext 1 /4
+        img(src="asset/image/gallery/1_wide.jpg" style="width:100%")
+      .mySlides
+        .numbertext 2 /4
+        img(src="asset/image/gallery/2_wide.jpg" style="width:100%")
+      .mySlides
+        .numbertext 3 /4
+        img(src="asset/image/gallery/3_wide.jpg" style="width:100%")
+      .mySlides
+        .numbertext 4 /4
+        img(src="asset/image/gallery/4_wide.jpg" style="width:100%")
+
+      //- controls for next or previous
+      a.prev(onclick="plusSlides(-1)")
+      a.next(onclick="plusSlides(1)")
+
+      //- text container
+      .caption-container
+        p#caption
+
+      //- thumbnail image control
+      .column
+        img.demo(src="asset/image/gallery/1.jpg" onclick="currentSlide(1)" alt="image one")
+      .column
+        img.demo(src="asset/image/gallery/2.jpg" onclick="currentSlide(2)" alt="image two")
+      .column
+        img.demo(src="asset/image/gallery/3.jpg" onclick="currentSlide(3)" alt="image three")
+      .column
+        img.demo(src="asset/image/gallery/4.jpg" onclick="currentSlide(4)" alt="image four")
+      script(src="asset/js/gallery.js")

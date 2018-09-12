@@ -1,15 +1,16 @@
-//- TODO: se incaleca acolo unul pe altul, il repari mai tarziu
+
 -
   var title = "Did you know!"
-div
-  h3=title
-  p.did-you-know__container
-div
-  h3=title
-  p.did-you-know__container
-div
-  h3=title
-  p.did-you-know__container
+div.containers  
+  div
+    h3=title
+    p.did-you-know__container
+  div
+    h3=title
+    p.did-you-know__container
+  div
+    h3=title
+    p.did-you-know__container
 
 script.
   var contentList = [
@@ -33,9 +34,7 @@ script.
   }
   document
     .querySelectorAll('.did-you-know__container')
-    //                      aici chemam function cu numele si () ->    numeFunctie()
-    .forEach(/*scriem o functie*/ didYouKnow => didYouKnow.innerHTML = randomContent())
-  // happy hacking
-  // merge acum, mai vroiai si in alta parte? sa apara in  toate trei diferit, nu?
+    .forEach(didYouKnow => didYouKnow.innerHTML = randomContent())
+
 
 
